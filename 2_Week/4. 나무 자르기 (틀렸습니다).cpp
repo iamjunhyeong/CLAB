@@ -8,8 +8,10 @@ int cutTree(int n, int m, int maxi, vector<int>& treeLen)
 {
 	unsigned int start = 0;
 	unsigned int end = maxi;
-	unsigned int mid, sum;
-
+	unsigned int mid;
+	long long sum;
+	int res;
+	
 	while (start <= end)
 	{
 		mid = (start + end) / 2;
@@ -22,12 +24,13 @@ int cutTree(int n, int m, int maxi, vector<int>& treeLen)
 
 		if (sum < m)
 			end = mid - 1;
-		else if (sum > m)
-			start = mid + 1;
 		else
-			return mid;
+		{
+			res = mid;
+			start = mid + 1;
+		}
 	}
-	return 0;
+	return res;
 }
 
 int main(void)
