@@ -4,7 +4,7 @@
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 using namespace std;
 #define SIZE 100
-bool IsPrime(int num)
+bool isPrime(int num)
 {
 	if (num <= 1)
 		return false;
