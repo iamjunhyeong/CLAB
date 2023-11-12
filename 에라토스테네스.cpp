@@ -24,6 +24,6 @@ int main(void)
 	vector<bool> isPrime(SIZE +1,true);
 	for (int i = 2; i <= 100; i++) {
 		for (int j = 2; i * j <= SIZE; j++) 
-			isPrime[i * j] = false
+			isPrime[i * j] = false;
 	}
 }
